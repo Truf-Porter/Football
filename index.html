@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>Liquid Football | Web Edition</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="loading">LIQUID FOOTBALL <span>Loading 3D pitch...</span></div>
+<div id="hud">
+  <div id="score"><span class="team-name">AZURE</span><b id="homeScore">0</b><i>–</i><b id="awayScore">0</b><span class="team-name">CRIMSON</span><small id="clock">00:00</small></div>
+  <div id="status">KICK OFF</div>
+  <div id="help">WASD move · Shift sprint · J pass · K shoot · L tackle · Q switch · C camera · Esc pause</div>
+  <div id="playerTag">PLAYER 7</div>
+  <div id="minimap"><canvas id="map" width="180" height="110"></canvas></div>
+  <div id="toast"></div>
+</div>
+<div id="mobileControls">
+  <div class="dpad">
+    <button data-key="KeyW" class="up">▲</button>
+    <button data-key="KeyA" class="left">◀</button>
+    <button data-key="KeyS" class="down">▼</button>
+    <button data-key="KeyD" class="right">▶</button>
+  </div>
+  <div class="actions">
+    <button data-key="ShiftLeft">SPRINT</button>
+    <button data-action="pass">PASS</button>
+    <button data-action="shoot">SHOOT</button>
+    <button data-action="tackle">TACKLE</button>
+    <button data-action="switch">SWITCH</button>
+  </div>
+</div>
+<div id="pause" class="hidden"><section><h1>PAUSED</h1><p>Take a breather.</p><button id="resume">RESUME MATCH</button><button id="restart">RESTART MATCH</button></section></div>
+<script type="module" src="game.js"></script>
+</body>
+</html>
